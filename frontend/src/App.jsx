@@ -31,20 +31,28 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-100 font-sans text-slate-800 antialiased relative">
-      <div className="max-w-5xl mx-auto p-4 sm:p-6 lg:p-8">
+    <div className="min-h-screen bg-slate-50 font-sans text-slate-800 antialiased relative overflow-hidden">
+      
+      {/* Dynamic Glassmorphism Background Orbs */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
+        <div className="absolute -top-[10%] -left-[10%] w-[50%] h-[50%] rounded-full bg-emerald-400/20 blur-[120px] mix-blend-multiply opacity-70 animate-pulse"></div>
+        <div className="absolute top-[20%] -right-[10%] w-[40%] h-[60%] rounded-full bg-sky-400/20 blur-[120px] mix-blend-multiply opacity-60"></div>
+        <div className="absolute -bottom-[10%] left-[20%] w-[60%] h-[40%] rounded-full bg-teal-300/20 blur-[120px] mix-blend-multiply opacity-50"></div>
+      </div>
+
+      <div className="max-w-5xl mx-auto p-4 sm:p-6 lg:p-8 relative z-10">
         
         {/* Header */}
-        <header className="flex justify-between items-center mb-8">
-          <div className="flex items-center gap-4">
-            <div className="bg-blue-600 text-white p-3 rounded-2xl shadow-lg shadow-blue-500/30">
-              <Map size={32} strokeWidth={2} />
+        <header className="flex justify-between items-center mb-10 mt-4">
+          <div className="flex items-center gap-5">
+            <div className="bg-gradient-to-tr from-blue-600 to-emerald-500 text-white p-3.5 rounded-2xl shadow-xl shadow-blue-500/20 ring-1 ring-white/50">
+              <Map size={32} strokeWidth={2.5} />
             </div>
             <div>
-              <h1 className="text-3xl font-extrabold tracking-tight">
-                Randall Preserve <span className="text-blue-600">Watch</span>
+              <h1 className="text-3xl font-display font-extrabold tracking-tight text-slate-900 drop-shadow-sm">
+                Randall Preserve <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-emerald-500">Watch</span>
               </h1>
-              <p className="text-sm font-semibold tracking-wider text-slate-400 uppercase mt-1">
+              <p className="text-sm font-semibold tracking-wider text-slate-500 uppercase mt-1">
                 Daily Intelligence Dashboard
               </p>
             </div>
@@ -52,15 +60,15 @@ function App() {
         </header>
 
         {/* Navigation Tabs */}
-        <nav className="flex items-center justify-between bg-slate-200/50 p-2 rounded-2xl mb-8 backdrop-blur-sm border border-white">
+        <nav className="flex items-center justify-between bg-white/40 p-2 rounded-2xl mb-10 backdrop-blur-xl border border-white/60 shadow-sm ring-1 ring-slate-900/5">
           {['Last 30 Days', 'Restoration', 'Neighbor Watch'].map((tab) => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`flex-1 py-3 px-4 text-center text-sm font-bold rounded-xl transition-all ${
+              className={`flex-1 py-3 px-4 text-center text-sm font-bold rounded-xl transition-all duration-300 ${
                 activeTab === tab 
-                  ? 'bg-white shadow-sm text-blue-600 border border-slate-100 ring-1 ring-slate-900/5' 
-                  : 'text-slate-500 hover:text-slate-700 hover:bg-white/40'
+                  ? 'bg-white shadow-[0_2px_10px_rgba(0,0,0,0.06)] text-blue-600 border border-white/80 ring-1 ring-slate-900/5 transform scale-[1.02]' 
+                  : 'text-slate-500 hover:text-slate-800 hover:bg-white/50'
               }`}
             >
               {tab}
@@ -69,11 +77,11 @@ function App() {
         </nav>
 
         {/* Main Content Area */}
-        <main className="min-h-[600px] mb-12 animate-in fade-in duration-300">
+        <main className="min-h-[600px] mb-12 animate-in fade-in slide-in-from-bottom-4 duration-700">
           {renderContent()}
         </main>
 
-        <footer className="text-center text-xs text-slate-400 font-medium pb-8 border-t border-slate-200 pt-8 mt-12">
+        <footer className="text-center text-xs text-slate-400 font-medium pb-8 border-t border-slate-200/50 pt-8 mt-12 backdrop-blur-sm">
           <p>© {new Date().getFullYear()} RANDALL PRESERVE WATCH</p>
           <p className="mt-1">AUTOMATED DAILY INTELLIGENCE</p>
         </footer>

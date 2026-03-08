@@ -20,11 +20,11 @@ const Last30Days = ({ feed }) => {
 
   const getBadgeColor = (category) => {
     switch (category) {
-      case 'OFFICIAL': return 'bg-blue-100 text-blue-700 border-blue-200';
-      case 'FUNDING': return 'bg-green-100 text-green-700 border-green-200';
-      case 'LOCAL': return 'bg-purple-100 text-purple-700 border-purple-200';
-      case 'SOCIAL': return 'bg-orange-100 text-orange-700 border-orange-200';
-      default: return 'bg-slate-100 text-slate-700 border-slate-200';
+      case 'OFFICIAL': return 'bg-blue-500/10 text-blue-700 ring-1 ring-inset ring-blue-500/20';
+      case 'FUNDING': return 'bg-emerald-500/10 text-emerald-700 ring-1 ring-inset ring-emerald-500/20';
+      case 'LOCAL': return 'bg-fuchsia-500/10 text-fuchsia-700 ring-1 ring-inset ring-fuchsia-500/20';
+      case 'SOCIAL': return 'bg-orange-500/10 text-orange-700 ring-1 ring-inset ring-orange-500/20';
+      default: return 'bg-slate-500/10 text-slate-700 ring-1 ring-inset ring-slate-500/20';
     }
   };
 
@@ -57,19 +57,19 @@ const Last30Days = ({ feed }) => {
       </div>
 
       {/* Feed List */}
-      <div className="space-y-4">
+      <div className="space-y-5">
         {filteredFeed && filteredFeed.length > 0 ? (
           filteredFeed.map((item) => (
-            <div key={item.id} className="bg-white border border-slate-200 rounded-2xl p-6 hover:shadow-xl hover:shadow-slate-200/50 hover:border-blue-100 transition-all group">
-              <div className="flex justify-between items-start mb-3">
-                <span className={`text-[10px] font-bold tracking-wider px-2 py-1 rounded-md border flex items-center gap-1.5 uppercase ${getBadgeColor(item.category)}`}>
+            <div key={item.id} className="bg-white/70 backdrop-blur-xl border border-white/60 shadow-sm rounded-3xl p-6 hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-200/50 hover:bg-white/90 transition-all duration-300 group ring-1 ring-slate-900/5">
+              <div className="flex justify-between items-start mb-4">
+                <span className={`text-[10px] font-bold tracking-wider px-2 py-1 rounded-md flex items-center gap-1.5 uppercase ${getBadgeColor(item.category)}`}>
                   {getIcon(item.category)}
                   {item.category}
                 </span>
                 <span className="text-xs text-slate-400 font-semibold">{item.date}</span>
               </div>
               
-              <h4 className="text-xl font-extrabold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors">
+              <h4 className="text-xl font-display font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors">
                 {item.title}
               </h4>
               <p className="text-slate-600 mb-4 leading-relaxed text-sm">

@@ -3,13 +3,13 @@ import { Leaf, Pickaxe, CheckCircle2, Clock, CalendarDays } from 'lucide-react';
 
 const Restoration = ({ timeline }) => {
   return (
-    <div className="animate-in slide-in-from-bottom-4 duration-500 fade-in bg-white border border-slate-200 rounded-3xl p-8 shadow-xl shadow-slate-200/50">
-      <div className="flex items-center gap-4 mb-10 border-b border-slate-100 pb-6">
-        <div className="bg-emerald-100 p-3 rounded-xl text-emerald-600">
+    <div className="animate-in slide-in-from-bottom-4 duration-500 fade-in bg-white/70 backdrop-blur-xl border border-white/60 rounded-3xl p-8 shadow-sm ring-1 ring-slate-900/5">
+      <div className="flex items-center gap-4 mb-10 border-b border-slate-200/50 pb-6">
+        <div className="bg-emerald-500/10 p-3 rounded-xl text-emerald-600 ring-1 ring-inset ring-emerald-500/20">
           <Leaf size={28} />
         </div>
         <div>
-          <h2 className="text-2xl font-bold text-slate-800">Project Timeline</h2>
+          <h2 className="text-2xl font-display font-bold text-slate-800">Project Timeline</h2>
           <p className="text-sm font-semibold text-emerald-600 tracking-wide uppercase">Restoration Progress</p>
         </div>
       </div>
@@ -30,13 +30,13 @@ const Restoration = ({ timeline }) => {
             </div>
 
             {/* Content */}
-            <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100 group-hover:border-emerald-200 group-hover:bg-emerald-50/30 transition-colors">
+            <div className="bg-white/50 backdrop-blur-sm p-6 rounded-2xl border border-white/60 shadow-sm group-hover:border-emerald-200/60 group-hover:bg-emerald-50/40 group-hover:shadow-md transition-all duration-300">
               <div className="flex flex-wrap items-center gap-2 text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">
                  <CalendarDays size={14} className="text-slate-300" />
                  {event.year} 
                  {event.month && <span className="bg-slate-200/50 text-slate-500 px-2 py-0.5 rounded-sm">{event.month}</span>}
               </div>
-              <h3 className="text-xl font-bold text-slate-800 mb-2">{event.title}</h3>
+              <h3 className="text-xl font-display font-bold text-slate-800 mb-2">{event.title}</h3>
               <p className="text-slate-600 leading-relaxed text-sm">
                 {event.description}
               </p>
