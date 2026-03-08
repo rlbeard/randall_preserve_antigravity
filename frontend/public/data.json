@@ -1,6 +1,15 @@
 {
   "feed": [
     {
+      "id": "feed-4",
+      "category": "LOCAL",
+      "date": "February 12, 2026",
+      "title": "Newport-Mesa School District Considers Housing Development on Land Adjacent to Randall Preserve",
+      "summary": "The Newport-Mesa Unified School District (NMUSD) is evaluating proposals to develop an 11.36-acre parcel of land near the Randall Preserve into housing, with proposals reaching up to 402 units. Environmental groups, including the Coastal Corridor Alliance, submitted a bid to acquire and preserve the land, but it was rejected. Concerns have also been raised by environmental groups about potential violations of the Surplus Land Act by the district during this process.",
+      "source": "Daily Pilot (Los Angeles Times)",
+      "sentiment": "NEGATIVE"
+    },
+    {
       "id": "feed-1",
       "category": "LOCAL",
       "date": "May 10, 2024",
