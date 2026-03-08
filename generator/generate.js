@@ -79,10 +79,14 @@ async function generateUpdates(existingData) {
     // Create a strict boundary between what we want it to search, and what it should output.
     const prompt = `
     TASK: You are an intelligence analyst for the 'Randall Preserve Watch' dashboard. 
-    You must perform a Google Search for recent news (within the last 7 to 14 days) regarding "Banning Ranch Newport Beach", "Randall Preserve", or "Newport Banning Land Trust". Look for mentions of city council approvals, conservation efforts, trail progress, or local community events.
+    You must perform a Google Search for recent news or social chatter (within the last 7 to 14 days) regarding "Banning Ranch Newport Beach", "Randall Preserve", or "Newport Banning Land Trust". 
+    To find community sentiment and social data, you should specifically include searches like: "site:reddit.com/r/orangecounty Banning Ranch" or "site:reddit.com/r/newportbeach Randall Preserve".
 
-    If you find a new, factual, and relevant update, generate 1 new intelligence feed item based strictly on that grounded search result. Return ONLY a valid JSON object. 
-    If there is absolutely no new relevant news, you still must return a valid JSON object, but you can omit adding a new feed item to the array.
+    If you find a new, factual, and relevant update or a notable community discussion on Reddit/public forums, generate 1 new intelligence feed item based strictly on that grounded search result. 
+    - If it's a news article, use the categories: "OFFICIAL", "FUNDING", or "LOCAL".
+    - If it's community chatter from Reddit or a forum, use the category: "SOCIAL".
+    Return ONLY a valid JSON object. 
+    If there is absolutely no new relevant news or social chatter, you still must return a valid JSON object, but you can omit adding a new feed item to the array.
 
     CRITICAL INSTRUCTION: You MUST return a JSON object with this exact structure:
     {
