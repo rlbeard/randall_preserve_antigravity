@@ -74,14 +74,15 @@ async function loadExistingData() {
 }
 
 async function generateUpdates(existingData) {
-    console.log("Contacting Gemini for intelligence updates...");
+    console.log("Contacting Gemini for intelligence updates with Google Search Grounding...");
     
+    // Create a strict boundary between what we want it to search, and what it should output.
     const prompt = `
-    You are an AI generating intelligence updates for the Randall Preserve Watch static dashboard.
-    Given the existing data, generate 1 new realistic intelligence feed item (news/update).
-    Return ONLY a valid JSON object. Focus on generating a new item for the 'feed' array.
-    Keep the existing timeline and neighborWatch items exactly the same, or add 1 if highly appropriate.
-    Ensure dates are formatted nicely (e.g. 'March 8, 2026').
+    TASK: You are an intelligence analyst for the 'Randall Preserve Watch' dashboard. 
+    You must perform a Google Search for recent news (within the last 7 to 14 days) regarding "Banning Ranch Newport Beach", "Randall Preserve", or "Newport Banning Land Trust". Look for mentions of city council approvals, conservation efforts, trail progress, or local community events.
+
+    If you find a new, factual, and relevant update, generate 1 new intelligence feed item based strictly on that grounded search result. Return ONLY a valid JSON object. 
+    If there is absolutely no new relevant news, you still must return a valid JSON object, but you can omit adding a new feed item to the array.
 
     CRITICAL INSTRUCTION: You MUST return a JSON object with this exact structure:
     {
@@ -91,8 +92,8 @@ async function generateUpdates(existingData) {
           "category": "OFFICIAL" | "FUNDING" | "LOCAL" | "SOCIAL",
           "date": "Month DD, YYYY",
           "title": "A short descriptive title",
-          "summary": "A 2-3 sentence summary of the update.",
-          "source": "Source Name (e.g. MRCA, local news)",
+          "summary": "A 2-3 sentence factual summary of the grounded news update.",
+          "source": "Name of the News Source or Agency you found via search",
           "sentiment": "POSITIVE" | "NEGATIVE" | "NEUTRAL" | "MIXED"
         }
       ],
@@ -100,17 +101,19 @@ async function generateUpdates(existingData) {
       "neighborWatch": [... existing neighborWatch ...]
     }
 
-    Existing Data:
+    Existing Data (Append your new feed item to the beginning of the 'feed' array if you found one):
     ${JSON.stringify(existingData)}
     `;
 
     try {
-        console.log("Sending request to Gemini API...");
-        const response = await fetch(`https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent?key=${API_KEY}`, {
+        console.log("Sending request to Gemini API (v1beta for search grounding)...");
+        // Grounding currently requires the v1beta endpoint
+        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${API_KEY}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                contents: [{ parts: [{ text: prompt }] }]
+                contents: [{ parts: [{ text: prompt }] }],
+                tools: [{ google_search: {} }]
             })
         });
 
@@ -121,14 +124,24 @@ async function generateUpdates(existingData) {
         }
 
         const data = await response.json();
+        
+        // Log grounding metadata to ensure it's actually searching!
+        const groundingMetadata = data.candidates?.[0]?.groundingMetadata;
+        if (groundingMetadata && groundingMetadata.searchEntryPoint) {
+            console.log("✅ Google Search Grounding was utilized!");
+            console.log("Search chunks found:", groundingMetadata.groundingChunks?.length || 0);
+        } else {
+            console.log("⚠️ No grounding metadata returned (LLM may have answered from memory).");
+        }
+
         let newJsonStr = data.candidates?.[0]?.content?.parts?.[0]?.text;
-        console.log("Received response from Gemini.");
+        console.log("Received text response from Gemini.");
         
         if (!newJsonStr) {
             throw new Error("No text returned from Gemini.");
         }
 
-        // Handle possible markdown wrapping if the LLM didn't respect being ONLY a JSON string
+        // Handle possible markdown wrapping
         if (newJsonStr.includes('```json')) {
             newJsonStr = newJsonStr.match(/```json\n([\s\S]*?)\n```/)[1];
         } else if (newJsonStr.includes('```')) {
@@ -167,6 +180,8 @@ async function updateGit() {
         await git.commit(`Automated Intelligence Update: ${new Date().toISOString()}`);
         console.log("Committed successfully.");
         
+        await git.push('origin', 'main');
+        console.log("Pushed to origin/main successfully!");
     } catch (e) {
         console.error("Git automation failed:", e);
     }
