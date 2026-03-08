@@ -1,0 +1,70 @@
+{
+  "feed": [
+    {
+      "id": "feed-1",
+      "category": "LOCAL",
+      "date": "May 10, 2024",
+      "title": "Community Input Session Announced for Randall Preserve Restoration Plans",
+      "summary": "The Randall Preserve steering committee invites local residents to participate in an upcoming public input session. This meeting will focus on gathering community feedback and ideas for the ecological restoration and public access plans currently under development. It's a key opportunity to shape the future of the preserve.",
+      "source": "Randall Preserve Steering Committee",
+      "sentiment": "POSITIVE"
+    },
+    {
+      "id": "feed-2",
+      "category": "FUNDING",
+      "date": "July 15, 2024",
+      "title": "Randall Preserve Awarded Major Grant for Habitat Restoration",
+      "summary": "The Randall Preserve has secured a significant grant from the California Wildlife Conservation Board. This funding will directly support critical habitat restoration projects, including native plant revegetation and water quality improvements, accelerating the preserve's ecological recovery. This investment highlights ongoing efforts to enhance biodiversity within the region.",
+      "source": "California Wildlife Conservation Board",
+      "sentiment": "POSITIVE"
+    },
+    {
+      "id": "feed-3",
+      "category": "LOCAL",
+      "date": "November 15, 2024",
+      "title": "Community Feedback Informs Initial Randall Preserve Master Plan Concepts",
+      "summary": "Following the successful May 10th community input session, the Randall Preserve Steering Committee reports a significant volume of valuable feedback from local residents. Key themes around trail design, native habitat restoration, and educational opportunities are now being integrated into the preliminary master plan concepts. This input is crucial for shaping the preserve's future.",
+      "source": "Randall Preserve Steering Committee",
+      "sentiment": "POSITIVE"
+    }
+  ],
+  "timeline": [
+    {
+      "id": "t1",
+      "year": "2022",
+      "month": "Dec",
+      "title": "Acquisition",
+      "description": "387 acres protected.",
+      "status": "completed"
+    },
+    {
+      "id": "t2",
+      "year": "2023 - 2027",
+      "title": "Cleanup (Oil Remediation)",
+      "description": "Capping 300+ wells.",
+      "status": "in-progress"
+    },
+    {
+      "id": "t3",
+      "year": "2024 - 2026",
+      "title": "Restoration Planning",
+      "description": "Resource & Resilience plans.",
+      "status": "in-progress"
+    },
+    {
+      "id": "t4",
+      "year": "2027+",
+      "title": "Public Access Construction",
+      "description": "Trails and gateways.",
+      "status": "future"
+    }
+  ],
+  "neighborWatch": [
+    {
+      "id": "nw1",
+      "type": "FIRE",
+      "title": "Fuel Modification",
+      "description": "Spring Clearance Scheduled: Late April"
+    }
+  ]
+}
