@@ -1,6 +1,15 @@
 {
   "feed": [
     {
+      "id": "feed-5",
+      "category": "OFFICIAL",
+      "date": "February 27, 2026",
+      "title": "Coastal Corridor Alliance Expands Mission and Launches New Store to Support Randall Preserve",
+      "summary": "The Coastal Corridor Alliance, formerly Banning Ranch Conservancy, has updated its mission to broadly focus on shielding and rejuvenating ecosystems within the Santa Ana River Coastal Corridor, including the Randall Preserve. The organization also announced the launch of a new merchandise store, with proceeds supporting their conservation and restoration efforts. Additionally, they continue to host monthly volunteer activities such as Coastal Discovery Tours, Fairview Park Restoration Days, and Beach & River Mouth Cleanups.",
+      "source": "Coastal Corridor Alliance",
+      "sentiment": "POSITIVE"
+    },
+    {
       "id": "feed-4",
       "category": "LOCAL",
       "date": "February 12, 2026",
