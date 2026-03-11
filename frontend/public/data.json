@@ -1,6 +1,15 @@
 {
   "feed": [
     {
+      "id": "feed-6",
+      "category": "OFFICIAL",
+      "date": "March 09, 2026",
+      "title": "California Coastal Commission Ecologist's Role in Conserving Randall Preserve Highlighted",
+      "summary": "A California Coastal Commission staff ecologist, Jonna, has been recognized for her instrumental contributions over the past decade in applying sound scientific principles to policy and decisions, particularly in conserving the Randall Preserve at Newport Banning Ranch. The preserve is notably one of the last intact wetland-bluff ecosystems remaining along the southern California coast.",
+      "source": "CA.gov",
+      "sentiment": "POSITIVE"
+    },
+    {
       "id": "feed-5",
       "category": "OFFICIAL",
       "date": "February 27, 2026",
