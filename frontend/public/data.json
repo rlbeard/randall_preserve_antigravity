@@ -1,6 +1,15 @@
 {
   "feed": [
     {
+      "id": "feed-7",
+      "category": "LOCAL",
+      "date": "March 12, 2026",
+      "title": "Newport-Mesa Unified School District Moves Forward with Housing Development Plan Adjacent to Randall Preserve",
+      "summary": "The Newport-Mesa Unified School District (NMUSD) board voted 4-2 to recognize Knighthall Capital LLC as the preferred bidder for a 99-year lease of an 11-acre plot adjacent to the Randall Preserve. This decision moves forward a proposal to build 169 units of housing, with 20% dedicated to low-income NMUSD staff. Environmental groups, including the Mountains and Recreation Conservation Authority, advocated for the land to be added to the preserve, but their alternative plan was not chosen.",
+      "source": "Los Angeles Times (Daily Pilot)",
+      "sentiment": "NEGATIVE"
+    },
+    {
       "id": "feed-6",
       "category": "OFFICIAL",
       "date": "March 09, 2026",
