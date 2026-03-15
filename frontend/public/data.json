@@ -1,6 +1,15 @@
 {
   "feed": [
     {
+      "id": "feed-8",
+      "category": "LOCAL",
+      "date": "March 13, 2026",
+      "title": "Newport-Mesa Unified School District Advances Plan for Housing Development Near Randall Preserve",
+      "summary": "The Newport-Mesa Unified School District board voted 4-2 to recognize Knighthall Capital LLC as the preferred bidder for a 99-year lease of an 11-acre plot at 980 16th Street, adjacent to the Randall Preserve. This decision moves forward a proposal to build 169 housing units, with up to 20% designated for low-income NMUSD staff. Environmental groups, including the Mountains and Recreation Conservation Authority, have voiced concerns and proposed an alternative plan to add the land to the preserve, while the district cites a critical need for revenue, with the lease expected to generate substantial funds.",
+      "source": "Los Angeles Times (Daily Pilot)",
+      "sentiment": "MIXED"
+    },
+    {
       "id": "feed-7",
       "category": "LOCAL",
       "date": "March 12, 2026",
