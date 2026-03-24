@@ -1,6 +1,15 @@
 {
   "feed": [
     {
+      "id": "feed-10",
+      "category": "LOCAL",
+      "date": "March 12, 2026",
+      "title": "Newport-Mesa Unified School District Advances Housing Project Near Randall Preserve",
+      "summary": "The Newport-Mesa Unified School District board voted 4-2 to recognize Knighthall Capital LLC as the preferred bidder for a 99-year lease of an 11-acre plot adjacent to the Randall Preserve, formerly known as Banning Ranch. This decision advances a proposal to construct 169 housing units, with 20% designated for low-income NMUSD staff. Environmental groups, including the Mountains and Recreation Conservation Authority, expressed concerns about the loss of natural open space, advocating for the land to be added to the preserve.",
+      "source": "Los Angeles Times (Daily Pilot)",
+      "sentiment": "MIXED"
+    },
+    {
       "id": "feed-9",
       "category": "LOCAL",
       "date": "March 12, 2026",
