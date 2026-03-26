@@ -1,6 +1,15 @@
 {
   "feed": [
     {
+      "id": "feed-11",
+      "category": "SOCIAL",
+      "date": "March 20, 2026",
+      "title": "Blogger Solicits Community Opinion on NMUSD Housing Project Near Randall Preserve",
+      "summary": "Local real estate blogger Jeb Smith discussed the Newport-Mesa Unified School District's recent decision to move forward with a housing development on 11 acres adjacent to the Randall Preserve. The post highlights the ongoing debate between prioritizing workforce housing and preserving environmentally sensitive land, asking readers to share their opinions on the matter. This indicates an active community discussion about the land's future.",
+      "source": "Jeb Smith | OC Realtor",
+      "sentiment": "MIXED"
+    },
+    {
       "id": "feed-10",
       "category": "LOCAL",
       "date": "March 12, 2026",
