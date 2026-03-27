@@ -1,6 +1,15 @@
 {
   "feed": [
     {
+      "id": "feed-12",
+      "category": "LOCAL",
+      "date": "March 20, 2026",
+      "title": "Public Invited to Help Shape Future of Randall Preserve as New Era Begins",
+      "summary": "A recent article in Voice of OC by Meincke signals a new era for the Randall Preserve, emphasizing public involvement in shaping its future. The piece extends an invitation for the community to contribute to the ongoing planning process for the preserve. While also touching upon environmental groups' concerns regarding an Orange County school project, the primary focus highlights the broader public engagement for the preserve's development.",
+      "source": "Voice of OC",
+      "sentiment": "POSITIVE"
+    },
+    {
       "id": "feed-11",
       "category": "SOCIAL",
       "date": "March 20, 2026",
