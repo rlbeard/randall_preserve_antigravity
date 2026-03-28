@@ -1,6 +1,15 @@
 {
   "feed": [
     {
+      "id": "feed-13",
+      "category": "FUNDING",
+      "date": "March 26, 2026",
+      "title": "Randall Preserve Secures Proposition 4 Funds for Climate and Recreation",
+      "summary": "The California Grants Portal has announced that funds appropriated under Proposition 4 are now available for the Randall Preserve. These funds are specifically allocated for initiatives that aim to reduce climate impacts on disadvantaged communities and vulnerable populations, and to create, protect, and expand outdoor recreation opportunities within the preserve. The funding is accessible to eligible nonprofit organizations, public agencies, and tribal governments, with availability for encumbrance or expenditure until June 30, 2028.",
+      "source": "California Grants Portal (CA.gov)",
+      "sentiment": "POSITIVE"
+    },
+    {
       "id": "feed-12",
       "category": "LOCAL",
       "date": "March 20, 2026",
