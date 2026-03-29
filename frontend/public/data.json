@@ -1,6 +1,15 @@
 {
   "feed": [
     {
+      "id": "feed-14",
+      "category": "LOCAL",
+      "date": "March 16, 2026",
+      "title": "NMUSD Advances Housing Project Near Randall Preserve with 196 Units",
+      "summary": "The Coastal Corridor Alliance website indicates that the Newport-Mesa Unified School District (NMUSD) has advanced its housing development plan for land adjacent to the Randall Preserve. This update, dated March 16, 2026, now specifies 196 housing units, a change from previously reported figures of 169 units. This development continues to spark community discussion regarding the balance between housing needs and environmental preservation.",
+      "source": "Coastal Corridor Alliance",
+      "sentiment": "MIXED"
+    },
+    {
       "id": "feed-13",
       "category": "FUNDING",
       "date": "March 26, 2026",
