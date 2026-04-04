@@ -1,6 +1,24 @@
 {
   "feed": [
     {
+      "id": "feed-16",
+      "category": "OFFICIAL",
+      "date": "April 03, 2026",
+      "title": "The Nature Conservancy Seeks Stewardship Technician for Randall Preserve",
+      "summary": "The Nature Conservancy has posted an opening for a Stewardship Technician at the Randall Preserve. The role encompasses diverse responsibilities, including maintaining preserve areas frequented by the public, removing exotic species, monitoring wildlife, managing tools and equipment, overseeing building maintenance, and assisting with working cattle ranch infrastructure. The technician will also be involved in operating small equipment and maintaining the preserve's sensor network.",
+      "source": "Myworkdayjobs.com (The Nature Conservancy)",
+      "sentiment": "POSITIVE"
+    },
+    {
+      "id": "feed-15",
+      "category": "FUNDING",
+      "date": "March 26, 2026",
+      "title": "Randall Preserve Secures Proposition 4 Funds for Climate and Recreation",
+      "summary": "The California Grants Portal announced that funds from Proposition 4 are now available for the Randall Preserve. These funds are specifically allocated to support initiatives that reduce climate impacts on disadvantaged communities and vulnerable populations, and to create, protect, and expand outdoor recreation opportunities within the preserve. Eligible entities for this funding include nonprofit organizations, public agencies, and tribal governments, with funds available for encumbrance or expenditure until June 30, 2028.",
+      "source": "California Grants Portal (CA.gov)",
+      "sentiment": "POSITIVE"
+    },
+    {
       "id": "feed-14",
       "category": "LOCAL",
       "date": "March 16, 2026",
