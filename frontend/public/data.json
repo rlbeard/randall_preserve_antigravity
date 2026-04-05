@@ -1,6 +1,15 @@
 {
   "feed": [
     {
+      "id": "feed-17",
+      "category": "OFFICIAL",
+      "date": "April 03, 2026",
+      "title": "Randall Preserve Recognized as Key to California's 30x30 Conservation Goal",
+      "summary": "A weekly update from Supervisor Foley highlighted the Randall Preserve as one of the \"Fabulous Fifth landmarks\" contributing to California's ambitious 30x30 goal. This state initiative aims to conserve 30% of California's lands and coastal waters by 2030 to combat climate change, protect biodiversity, and enhance public access to nature. As of mid-2025, the state has reportedly conserved over 26% of land and approximately 21.9% of coastal waters, underscoring the preserve's role in these efforts.",
+      "source": "GovDelivery (A Weekly Update from Supervisor Foley)",
+      "sentiment": "POSITIVE"
+    },
+    {
       "id": "feed-16",
       "category": "OFFICIAL",
       "date": "April 03, 2026",
